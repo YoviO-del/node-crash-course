@@ -1,0 +1,15 @@
+{
+  "name": "nodejs-course",
+  "version": "1.0.0",
+  "description": "Node.js course code",
+  "license": "MIT",
+  "author": "Yovi",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server2.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
