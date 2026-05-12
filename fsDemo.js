@@ -22,10 +22,11 @@ const readFile = async () => {
          const data =  await fs.readFile('./test.txt', 'utf8')
         console.log(data)
     }
-    catch{
+    catch (error) {
         console.log(error)
     }
 };
+
 
 
 
@@ -41,9 +42,9 @@ const writeFile = async() => {
 }
 
 // appendFile()
-const appendFile = async () => {
+const appendFile = async (info) => {
     try{
-        await fs.appendFile('./test.text', '\nThis is appended text')
+        await fs.appendFile(`./test.txt', '\nThis is appended text ${info} is also written`)
         console.log('File appended to')
     } catch (error) {
         console.log(error)
@@ -51,5 +52,5 @@ const appendFile = async () => {
 }
 
 readFile();
-appendFile();
+appendFile('LeBron James');
 writeFile();
