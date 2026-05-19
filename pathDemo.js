@@ -1,38 +1,30 @@
-import path from 'path'
-import url from 'url'
+import path from 'path';
+import url from 'url';
+
 
 const filePath = './dir1/dir2/test.txt';
 
-// basename()
-console.log(path.basename(filePath));
+//basename() Returns the last portion of a file
+console.log(path.basename(filePath))
 
+console.log(path.dirname(filePath))
 
-//dirname()
-console.log(path.dirname(filePath));
+console.log(path.extname(filePath))
 
-// extname()
-console.log(path.extname(filepath))
 
 // parse()
-// returns a js object
-console.log(path.parse(filePath));
+console.log(path.parse(filePath))
 
-// gives actuall file Path
-const __fileName = url.fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__fileName)
+const __filename = url.fileURLToPath(import.meta.url)  // gives file path
+const __dirname = path.dirname(__filename)
 
-// join()
-// constructs a path
-//👉 Think: just glue paths together
-const filePath2 = path.join(__dirname, 'dir1', 'dir2', 'test.txt')
+console.log(__filename)
 
-
-// reslolve()
-// 👉 Think: “Where is this file on my system?”
-const filePath3 = path.resolve(__dirname, 'dir1', 'dir2', 'test.txt')
+//join()
+const filePath2 = path.join(__dirname,'dir1','dir2','test.txt')
+console.log(filePath2)
 
 
-/**
- * Use join when building relative paths
-Use resolve when you need a full path Node can locate from anywhere
- */
+// resolve()
+const filePath3 = path.resolve(__dirname,'dir1','dir2','test.txt')
+console.log(filePath3)

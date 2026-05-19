@@ -17,40 +17,42 @@ import fs from 'fs/promises';
 
 // readFile() - async/await
 
-const readFile = async () => {
-    try {
-         const data =  await fs.readFile('./test.txt', 'utf8')
-        console.log(data)
-    }
-    catch (error) {
-        console.log(error)
-    }
-};
+// const readFile = async () => {
+//     try {
+//          const data =  await fs.readFile('./test.txt', 'utf8')
+//         console.log(data)
+//     }
+//     catch (error) {
+//         console.log(error)
+//     }
+// };
 
 
 
 
 //writeFile() 
 // If it doesn't exist it'll create it  (Over writing it)
-const writeFile = async() => {
-    try{
-        await fs.writeFile('./test.txt', 'Hello I am writing to this file');
-        console.log('File writen to..')
-    } catch (error) {
-        console.log(error);
-    }
-}
+// const writeFile = async() => {
+//     try{
+//         await fs.writeFile('./test.txt', 'Hello I am writing to this file');
+//         console.log('File writen to..')
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
 
-// appendFile()
-const appendFile = async (info) => {
-    try{
-        await fs.appendFile(`./test.txt', '\nThis is appended text ${info} is also written`)
-        console.log('File appended to')
-    } catch (error) {
-        console.log(error)
-    }
-}
+// // appendFile()
+// const appendFile = async (info) => {
+//     try{
+//         await fs.appendFile(`./test.txt', '\nThis is appended text ${info} is also written`)
+//         console.log('File appended to')
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
 
-readFile();
-appendFile('LeBron James');
-writeFile();
+// readFile();
+// appendFile('LeBron James');
+// writeFile();
+
+console.log('Testing')
